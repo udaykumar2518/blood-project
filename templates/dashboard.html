@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
 
+<div style="display:flex;">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>🩸 Blood App</h2>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/register">Register</a>
+        <a href="/search">Search</a>
+        <a href="/donors">Donors</a>
+        <a href="/logout" class="btn">Logout</a>
+        <center>
+    <a href="/" class="home-btn">⬅ Back to Home</a>
+</center>
+    </div>
+
+    <!-- Content -->
+    <div style="flex:1; padding:20px;">
+
+        <h2 style="text-align:center;">📊 Dashboard</h2>
+
+        <!-- Stats Cards -->
+        <div class="dashboard">
+
+            <div class="dashboard-card">
+                <h3>🧍 Total Donors</h3>
+                <p>{{ total }}</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>🩸 Blood Groups</h3>
+                <p>{{ blood_types }}</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>🏙 Cities Covered</h3>
+                <p>{{ cities }}</p>
+            </div>
+
+        </div>
+
+        <!-- Recent Donors Table -->
+        <h3 style="margin-top:40px;">🧾 Recent Donors</h3>
+
+        <table border="1" align="center" cellpadding="10">
+            <tr>
+                <th>Name</th>
+                <th>Blood</th>
+                <th>City</th>
+                <th>Phone</th>
+            </tr>
+
+            {% for d in donors %}
+            <tr>
+                <td>{{ d[1] }}</td>
+                <td>{{ d[2] }}</td>
+                <td>{{ d[3] }}</td>
+                <td>{{ d[4] }}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+</html>
