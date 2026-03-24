@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Donors List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
 
+<h2 style="text-align:center;">🩸 Registered Donors</h2>
+
+<table border="1" align="center" cellpadding="10">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Blood</th>
+        <th>City</th>
+        <th>Phone</th>
+        <th>Action</th>
+    </tr>
+
+    {% for d in donors %}
+    <tr>
+        <td>{{ d[0] }}</td>
+        <td>{{ d[1] }}</td>
+        <td>{{ d[2] }}</td>
+        <td>{{ d[3] }}</td>
+        <td>{{ d[4] }}</td>
+        <td>
+    <a href="/delete/{{ d[0] }}" style="color:red;">Delete</a>
+</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+<center><a href="/">⬅ Back to Home</a></center>
+
+</body>
+</html>
