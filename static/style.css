@@ -1,1 +1,173 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #c31432, #240b36);
+    color: white;
+    text-align: center;
+}
+
+/* Home */
+.main {
+    margin-top: 150px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 25px;
+    background: white;
+    color: black;
+    border-radius: 30px;
+    margin: 10px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: black;
+    color: white;
+}
+
+/* Forms */
+.form-container {
+    width: 300px;
+    margin: 100px auto;
+    background: white;
+    color: black;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+form input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background: #c31432;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background: #240b36;
+}
+
+/* Dashboard (safe) */
+.dashboard {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.dashboard-card {
+    background: white;
+    color: black;
+    padding: 25px;
+    border-radius: 12px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+.dashboard-card p {
+    font-size: 32px;
+    font-weight: bold;
+    color: #c31432;
+}
+.dashboard-card {
+    border-top: 6px solid #c31432;
+}
+/* Sidebar (safe) */
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background: #240b36;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+.sidebar a:hover {
+    color: #c31432;
+}
+/* Table styling */
+table {
+    border-collapse: collapse;
+    width: 80%;
+    background: white;
+    color: black;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+th {
+    background: #c31432;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background: #f2f2f2;
+}
+.sidebar {
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+}
+/* Fix button visibility in dashboard */
+.content .btn {
+    background: #c31432;
+    color: white;
+}
+
+.content .btn:hover {
+    background: #240b36;
+}
+.home-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #c31432;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
 
