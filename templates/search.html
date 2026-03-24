@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Blood</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
 
+<div class="form-container">
+    <h2>🔍 Search Blood</h2>
+
+    <form method="POST">
+    <input type="text" name="blood" placeholder="Enter Blood Group">
+    <input type="text" name="city" placeholder="Enter City">
+
+    <button type="submit">Search</button>
+    <a href="/">⬅ Back to Home</a>
+</form>
+{% if results %}
+    <h3>Results:</h3>
+    <table border="1" align="center">
+        <tr>
+            <th>Name</th>
+            <th>Blood</th>
+            <th>City</th>
+            <th>Phone</th>
+        </tr>
+
+        {% for r in results %}
+        <tr>
+            <td>{{ r[1] }}</td>
+            <td>{{ r[2] }}</td>
+            <td>{{ r[3] }}</td>
+            <td>{{ r[4] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endif %}
+
+    
+</div>
+
+</body>
+</html>
